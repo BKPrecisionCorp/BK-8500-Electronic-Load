@@ -8,6 +8,7 @@ __pycache__/
 
 # Emacs temporary files
 *.py~
+*.md~
 
 # Distribution / packaging
 .Python

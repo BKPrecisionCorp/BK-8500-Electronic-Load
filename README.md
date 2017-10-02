@@ -1,6 +1,6 @@
 # BK8500Examples
 
-This project is a result of numerous customer support calls and is an effort to better help our customers solver their test challenges quickly and effectively. For questions not addressed here or for more details about the instrument see www.bkprecision.com
+This project is a result of numerous customer support calls and is an effort to better help our customers solve their test challenges quickly and effectively. For questions not addressed here or for more details about the instrument see www.bkprecision.com
 
 #####################################
 
