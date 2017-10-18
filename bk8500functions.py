@@ -20,6 +20,7 @@ def cmd8500(cmd , ser):
     printbuff(cmd)
     ser.write(cmd)
     resp = ser.read(26)
+    errorCheck(resp)
     #print("Resp: ")
     printbuff(resp);
     
@@ -37,3 +38,18 @@ def csum(thing):
     for i in range(len(thing)):
         sum+=thing[i]
     return 0xFF&sum;
+
+def errorCheck(b):
+    x = ""
+    if b[3] == 0x90:
+        print("Checksum Error: ", end='')
+    elif b[3] == 0xA0:
+        print("Parameter Incorrect: ",end='')
+    elif b[3] == 0xB0:
+        print("Unrecognized Command: ",end='')
+    elif b[3] == 0xC0:
+        print("Invalid Command: ",end='')
+    elif b[3] == 0x80:
+        print("Success: ",end='')
+    else:
+        print("Data return: ",end='')
