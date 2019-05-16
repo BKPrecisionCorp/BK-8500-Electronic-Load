@@ -8,7 +8,7 @@ Python 3
 
 pySerial
 ```
-pip install serial
+pip install pyserial
 ```
 
 ## Command Interface
