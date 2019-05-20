@@ -2,6 +2,15 @@
 
 This project is a result of numerous customer support calls and is an effort to better help our customers solve their test challenges quickly and effectively. For questions not addressed here or for more details about the instrument see [B&K Precision](http://www.bkprecision.com)
 
+## Requirements
+Python 3
+### External Requirements
+
+pySerial
+```
+pip install pyserial
+```
+
 ## Command Interface
 The command interface of the BK8500 series uses a 26 Byte packet interface. A command is a single packet and each command either returns a command status response packet or a command specific packet.
 

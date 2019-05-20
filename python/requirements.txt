@@ -1,0 +1,5 @@
+Requirements: Python 3
+
+external Python package requirements: pySerial
+  pip install serial
+  
