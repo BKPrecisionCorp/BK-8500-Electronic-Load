@@ -6,7 +6,7 @@ def cmd8500(cmd ):
     ser.write(cmd)
     resp = ser.read(26)
     print("Resp: ")
-    printbuff(resp);
+    printbuff(resp)
     
 def printbuff(b):
     r=""
@@ -15,11 +15,11 @@ def printbuff(b):
         r+=str(s)
         r+="-"
         r+=hex(b[s])
-    print(r);
+    print(r)
 
 ser = serial.Serial()
 ser.baudrate = 9600
-ser.port = 'COM3'
+ser.port = 'COM4'
 print(ser)
 ser.open()
 print(ser.is_open)
