@@ -55,6 +55,25 @@ bk8500functions.cmd8500(cmd, ser)
 
 8500List.py uses bk8500functions.py and creates a list sequence in the load.
 
+### Experimental Python 3 port
+In the Python 3 port directory is a modified version of the older Python 2 library which is able to abstract away more of the messaging interface. Higher level functions are made available and there is an example python script and a notebook that has been included.
+
+```
+from dcload import DCLoad
+
+# Connecting to the load and turning it on to 5A
+load = DCLoad("COM4", 9600, 0)  # Connecting to the load
+load.SetRemoteControl()  # Setting remote control
+load.TurnLoadOff()  # Making sure the load is off before setting up
+load.SetMode('cc')  # Setting CC mode
+load.SetMaxCurrent(10)  # Setting the maximum current
+load.SetMaxVoltage(100)   # Setting the maximum voltage
+load.SetMaxPower(300)  # Setting the maximum power
+load.SetCCCurrent(5)  # Setting the constant current setpoint
+load.TurnLoadOn()  # Enabling the load
+print(load.GetInputValues()) # Print the parameters from the load
+```
+
 ### LabView
 Within the LabView folder, there are some basic examples as well. These are written using the LabView driver written by B&K for this product series. For these drivers, download the [8500 LabView Driver](https://www.bkprecision.com/products/dc-electronic-loads/8500-300-w-programmable-dc-electronic-load.html) located under the "Docs & Software" tab.
 
